@@ -9,7 +9,14 @@ class App extends React.Component{
       {id:2, content:'Build React JS Project'}
     ]
   }
- 
+  delTodo=(id)=>{
+    const Todos = this.state.todos.filter((todo)=>{
+      return todo.id !== id
+    });
+    this.setState({
+      todos: Todos
+    })
+  }
   render(){
     return(
       <div className="container" >
