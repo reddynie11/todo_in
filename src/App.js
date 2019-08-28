@@ -1,6 +1,7 @@
 import React from 'react';
 
 import Todos from './Todos';
+import AddTodo from './AddTodo';
 
 class App extends React.Component{
   state={
@@ -22,6 +23,7 @@ class App extends React.Component{
       <div className="container" >
         <h2 className="center blue-text" > ToDO's</h2>
         <Todos todos={this.state.todos} delTodo={this.delTodo}/>
+        <AddTodo />
       </div>
       
     )
