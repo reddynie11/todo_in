@@ -19,8 +19,11 @@ class App extends React.Component{
     })
   }
   addTodo=(newTodo)=>{
-    
-    
+    newTodo.id= Math.random();
+    const NewTodo = [...this.state.todos,newTodo]
+    this.setState({
+      todos : NewTodo
+    })
   }
   render(){
     return(
