@@ -18,12 +18,16 @@ class App extends React.Component{
       todos: Todos
     })
   }
+  addTodo=(newTodo)=>{
+    
+    
+  }
   render(){
     return(
       <div className="container" >
         <h2 className="center blue-text" > ToDO's</h2>
         <Todos todos={this.state.todos} delTodo={this.delTodo}/>
-        <AddTodo />
+        <AddTodo addTodo={this.addTodo}  />
       </div>
       
     )

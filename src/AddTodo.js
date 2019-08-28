@@ -4,12 +4,22 @@ class AddTodo extends React.Component{
     state={
         content:''
     }
+    handleChange =(e)=>{
+        this.setState({
+            content: e.target.value
+        })
+    }
+    handleSubmit = (e)=>{
+        e.preventDefault();
+        this.props.addTodo(this.state)
+    }
+
     render(){
         return(
             <div>
-                <form>
+                <form onSubmit={this.handleSubmit} >
                     <label>Add a Task:  </label>
-                    <input type="text" />
+                    <input type="text" onChange={this.handleChange} />
                 </form>
             </div>
         )
